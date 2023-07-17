@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="953.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionnotes.ControlleurFXML.AfficheEleveFXMLController">
+    <stylesheets>
+        <URL value="@/StyleCSS/afficheelevefxml.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="8.0" layoutY="181.0" prefHeight="339.0" prefWidth="937.0">
+         <children>
+            <TableView fx:id="tableAffiche" prefHeight="339.0" prefWidth="931.0">
+              <columns>
+                <TableColumn fx:id="matricule" prefWidth="73.0" text="Matricule" />
+                <TableColumn fx:id="nomEl" prefWidth="116.0" text="Nom" />
+                  <TableColumn fx:id="prenomEl" prefWidth="131.0" text="Prénom" />
+                  <TableColumn fx:id="nomP" prefWidth="108.0" text="Père" />
+                  <TableColumn fx:id="nomM" prefWidth="130.0" text="Mère" />
+                  <TableColumn fx:id="dateNais" prefWidth="132.0" text="Date de Naissane" />
+                  <TableColumn fx:id="niveau" prefWidth="135.0" text="Niveau" />
+                  <TableColumn fx:id="photo" prefWidth="96.0" text="Photo" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" prefHeight="70.0" prefWidth="764.0" text="LISTE ELEVES" textFill="#2577b4">
+         <font>
+            <Font name="Corbel Bold" size="49.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

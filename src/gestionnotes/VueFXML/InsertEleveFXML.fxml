@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="852.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionnotes.ControlleurFXML.InsertEleveController">
+    <stylesheets>
+        <URL value="@/StyleCSS/insertEleveStylel.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="58.0" prefWidth="750.0" text="ENREGISTRMENT ELEVE" textFill="#2577b4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Corbel Bold" size="49.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="14.0" layoutY="78.0" prefHeight="272.0" prefWidth="627.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="6.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="7.0" prefHeight="27.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Prenom:" textFill="#244a65">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Nom:" textFill="#244a65" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="PrenomEleve" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="NomEleve" prefHeight="40.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </TextField>
+            <Label text="Prenom du Père:" textFill="#244a65" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Nom Complet de la Mère:" textFill="#244a65" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="PrenomPere" prefHeight="25.0" prefWidth="199.0" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="NomMere" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </TextField>
+            <Label text="Date de Naissance:" textFill="#244a65" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Niveau d'Etude:" textFill="#244a65" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <DatePicker fx:id="DateNais" onMouseClicked="#remplirComboNiveau" prefHeight="34.0" prefWidth="301.0" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <ComboBox fx:id="NiveauEtudeEleve" prefHeight="35.0" prefWidth="308.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Button fx:id="ParcourirPhoto" defaultButton="true" layoutX="668.0" layoutY="283.0" mnemonicParsing="false" onAction="#parcourirPhoto" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #2577B4;" text="Parcourir" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="16.0" />
+         </font>
+      </Button>
+      <HBox layoutX="14.0" layoutY="367.0" prefHeight="47.0" prefWidth="589.0">
+         <children>
+            <Button fx:id="EnregEleve" defaultButton="true" mnemonicParsing="false" onAction="#Enregistrement" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: #4DC95C;" text="Enregister" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="ModifEleve" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: #5A5A5A;" text="Modifier" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Corbel Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="SupEleve" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: #E43D30;" text="Supprimer" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Corbel Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="654.0" layoutY="78.0" prefHeight="200.0" prefWidth="177.0" style="-fx-border-style: solid; -fx-border-color: #2577B4; -fx-border-radius: 4px; -fx-border-width: 3px;">
+         <children>
+            <ImageView fx:id="imgEleve" fitHeight="191.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

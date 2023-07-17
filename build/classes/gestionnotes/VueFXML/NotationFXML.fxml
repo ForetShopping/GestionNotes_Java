@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="436.0" prefWidth="716.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionnotes.ControlleurFXML.NotationFXMLController">
+    <stylesheets>
+        <URL value="@/StyleCSS/notationfxml.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutY="2.0" prefHeight="70.0" prefWidth="764.0" text="INSERTION DE NOTES" textFill="#2577b4">
+         <font>
+            <Font name="Corbel Bold" size="49.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

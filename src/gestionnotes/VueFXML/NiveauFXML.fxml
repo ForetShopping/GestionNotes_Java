@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="852.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionnotes.ControlleurFXML.NiveauController">
+    <stylesheets>
+        <URL value="@/StyleCSS/niveauStyle.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="529.0" text="ENREGISTREMENT D'UN NIVEAU" textFill="#2577b4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Corbel Bold" size="49.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="42.0" layoutY="90.0" prefHeight="216.0" prefWidth="671.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Libellé du Niveau:" textFill="#244a65">
+               <font>
+                  <Font name="Corbel Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Cycle du Niveau:" textFill="#244a65" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Corbel Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="LibelleNiveau" prefHeight="36.0" prefWidth="517.0" promptText="Ex: 11em SS; 12 SL; Terminale SM ..." style="-fx-border-color: #244a65; -fx-border-style: solid; -fx-border-radius: 3px; -fx-background-color: #ffffff;" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="100.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="CycleNiveau" onMouseClicked="#RemplirComboCycleNiveau" prefHeight="41.0" prefWidth="558.0" style="-fx-background-color: #ffffff; -fx-border-style: solid; -fx-border-color: #244a65; -fx-border-radius: 3px; -fx-font-size: 18px;" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" right="100.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+      </GridPane>
+      <HBox layoutX="59.0" layoutY="335.0" prefHeight="46.0" prefWidth="600.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#enregistrementNiveau" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #4DC95C;" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="212.0" style="-fx-background-color: #5A5A5A;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #E43D30;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

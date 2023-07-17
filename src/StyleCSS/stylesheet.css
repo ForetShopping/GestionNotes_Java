@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    #username{
+            -fx-border: 2px solid blue;
+            -fx-background-color: #E43D30;
+    }
+}
